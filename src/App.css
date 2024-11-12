@@ -1,109 +1,268 @@
-/* Ensures body and html take full height */
+/* General page styling */
 html, body {
+  background: #18614b;
   height: 100%;
   margin: 0;
 }
 
-/* Background gradient for entire viewport */
 .bg-gradient {
-  background: #20c997;
+  background: #18614b;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Container to center the box */
-.page-container {
+/* Main and page container adjustments */
+.main-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center;     /* Center vertically */
-  height: 100vh;           /* Full viewport height */
-  background:linear-gradient(#20c997,black); /* Light background for contrast */
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.page-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 0.5rem;
+  }
+}
+
+/* Home component */
+.container {
+  max-width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.row img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1rem;
 }
 
 /* Box Styling */
 .box {
-  width: 80vw;              /* Large box, 80% of viewport width */
-  height: 80vh;             /* Large box, 80% of viewport height */
-  /* background-color: #ffffff; White background */
-  background: linear-gradient(red,blue);
-  border-radius: 15px;       /* Rounded corners */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Soft shadow */
-  padding: 30px;            /* Inner padding */
-  overflow: auto;           /* Enable scrolling if content overflows */
+  width: 80vw;
+  height: 80vh;
+  background: linear-gradient(red, blue);
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  overflow: auto;
 }
 
-/* Custom teal color for btn-outline-info */
-.btn-outline-info {
-  color: #20c997;            /* Teal text */
-  border-color: #20c997;     /* Teal border */
+/* Navbar responsive styling */
+.navbar {
+  padding: 0.5rem 1rem;
 }
 
-.btn-outline-info:hover {
-  background-color: #20c997; /* Teal background on hover */
-  color: #000000;            /* Black text on hover */
+.navbar-toggler {
+  border: none;
 }
 
-/* Overwrite bg-dark to black */
-.navbar.bg-dark {
-  background-color: #000 !important; /* Force black background */
+@media (max-width: 768px) {
+  .navbar .nav-link {
+    font-size: 1rem;
+  }
+
+  .btn-outline-info {
+    font-size: 0.9rem;
+  }
 }
 
-/* Optional: Customize text and links for better contrast */
-.navbar.bg-dark .navbar-brand,
-.navbar.bg-dark .nav-link {
-  color: #fff !important; /* Make text white */
-}
-
-/* Optional: Change the button color to make it stand out on black */
-.navbar.bg-dark .btn-outline-light {
-  border-color: #00bcd4; /* Example border color */
-  color: #00bcd4;         /* Example text color */
-}
-
-.navbar.bg-dark .btn-outline-light:hover {
-  background-color: #00bcd4; /* Change background color on hover */
-  color: #fff;               /* Make text white on hover */
-}
-
-
-.content {
-  display: flex;            /* Arrange the image and info side by side */
-  justify-content: flex-start;
-  align-items: center;      /* Vertically center the content */
-  width: 80%;               /* Give the content a reasonable width */
-  max-width: 1200px;        /* Set a maximum width */
-}
-
-.image-container {
-  flex: 1;                  /* Allow image container to take available space */
+/* Footer styling */
+.footer-container {
   display: flex;
-  justify-content: flex-start;  /* Align the image to the left */
-  align-items: center;  
-  margin-left: 0px;        /* Vertically center the image */
-  margin-right: 0px;        /* Vertically center the image */
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background: linear-gradient(black, #20c997);
 }
 
-.image {
-  width: auto;              /* Let the width adjust based on the image's natural size */
-  max-width: 300px;         /* Limit the maximum width */
-  min-width: 150px;         /* Set a minimum width */
-  height: 500px;            /* Set a fixed height to create an oval shape */
-       /* Make the image oval by rounding the corners */
-  object-fit: cover;        /* Ensure the image covers the box without distorting */
+.footer-container .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
 }
 
-
-.info-container {
-  flex: 1;                  /* Allow info container to take available space */
-  margin-left: 0px;        /* Add space between the image and info container */
-  text-align: left;         /* Align the text to the left */
+.footer-container .col-md-3,
+.footer-container .col-md-6 {
+  flex: 1 1 100%;
+  margin-bottom: 1rem;
 }
 
-.info-container h1 {
-  font-size: 2rem;          /* Increase font size for the title */
+.footer-container .d-flex a {
+  font-size: 1.2rem;
+  margin: 0 5px;
 }
 
-.info-container p {
-  font-size: 1rem;          /* Adjust the font size for the description */
+@media (max-width: 768px) {
+  .footer-container .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-container .d-flex a {
+    font-size: 1rem;
+  }
 }
+
+/* Base Button Styling */
+.custom-btn {
+  border: 2px solid #18614b;
+  color: #18614b;
+  background-color: transparent;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.custom-btn:hover {
+  background-color: #18614b;
+  color: white;
+}
+
+/* Active Effect (when clicked) */
+.custom-btn:active {
+  background-color: #155e45; /* Darker shade of the theme color */
+  color: white;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Focus Effect */
+.custom-btn:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 2px rgba(24, 97, 75, 0.5); /* Focus shadow to highlight the button */
+}
+.social-icon {
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #20c997; /* Match the theme color on hover */
+}
+
+.custom-btn-resume {
+  border: 2px solid black;
+  color: black;
+  background-color: transparent;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.custom-btn-resume:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Active Effect (when clicked) */
+.custom-btn-resume:active {
+  background-color: black; /* Darker shade of the theme color */
+  color: white;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Focus Effect */
+.custom-btn-resume:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 2px rgba(24, 97, 75, 0.5); /* Focus shadow to highlight the button */
+}
+
+/* Style for placeholder background */
+.form-control {
+  background-color: #ac1cac; /* Background color for the input and textarea */
+}
+
+.form-control::placeholder {
+  color: #1e70b8; /* Placeholder text color */
+  opacity: 5; /* Ensures placeholder text is fully visible */
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Optional: You can adjust the max-width based on design */
+  overflow: hidden; /* Hide cards that are outside the container */
+}
+
+.card-wrapper {
+  display: flex;
+}
+
+.card {
+  flex: 0 0 80%; /* Card takes up 80% of the container width */
+  margin: 0 10px; /* Add spacing between cards */
+  transition: transform 0.5s ease-in-out;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0; /* Rounded top corners */
+}
+
+.slide-btn {
+  background-color: #70c1bc;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 10px 15px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.slide-btn:hover {
+  background-color: #3b8c8b;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 100%; /* On smaller screens, cards take up the full width */
+  }
+
+  .slide-btn {
+    font-size: 16px;
+  }
+}
+

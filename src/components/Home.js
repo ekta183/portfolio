@@ -1,27 +1,45 @@
-import React from 'react';
-import '../App.css';
-import portfolioImage from '../photos/portfolio.png';  
-import Footer from './Footer';
+import React from "react";
+import "../App.css";
+import portfolioImage from "../photos/portfolio.png";
+import Footer from "./Footer";
+import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
-    <div>
-    <div className="page-container">
-       <div class="container text-center">
-  <div class="row">
-    <div class="col align-self-end">
-    <img src={portfolioImage} alt="description" />
-    </div>
-    <div class="col align-self-center ">
-      <h1>Welcome to My Page</h1>
-          <p>This is a brief description of the page content. You can add more text here to explain what this page is about.</p>
-    </div>
-  </div>
-</div>
+    <div className="main-container">
+      <div className="page-container">
+        <div className="container text-center">
+          <div className="row">
+            <div className="col align-self-end">
+              <img
+                src={portfolioImage}
+                alt="description"
+                className="portfolio-image"
+              />
+            </div>
+            <div className="col align-self-center">
+              <h1>Hello! I'm Ekta Jangir</h1>
+              <p>
+                A Computer Science student at IIIT Bhagalpur
+                with a passion for coding, web development, and machine
+                learning. Explore my portfolio to see my journey in creating
+                impactful projects and embracing the latest in tech.
+              </p>
 
+              {/* Center the button */}
+              <div className="d-flex justify-content-center">
+                <Link to="https://drive.google.com/file/d/1o9bkf02Za0Jse6Mmu1rgO5FETAuUA1e3/view?usp=sharing ">
+                  <button className="btn custom-btn-resume" type="button">
+                    My Resume
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
-    <Footer/>
-    </div>
-    
   );
 };
 
