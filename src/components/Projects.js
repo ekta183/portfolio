@@ -35,6 +35,18 @@ const Projects = () => {
               data-bs-slide-to="2"
               aria-label="Slide 3"
             ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
           </div>
           <div className="carousel-inner">
             <div className="carousel-item active" data-bs-interval="10000">
@@ -63,7 +75,7 @@ const Projects = () => {
                 className="d-block w-100"
                 alt="..."
               />
-              <div className="carousel-caption d-none d-md-block">
+              <div className="carousel-caption d-none d-md-block" style={{color:"white"}}>
                 <h5>TICKET AGENT</h5>
                 <Link to="https://github.com/ekta183/ai_agent_project" style={{color:"white"}}>
                 <p>
@@ -117,7 +129,7 @@ const Projects = () => {
                 </Link>
               </div>
             </div>
-            <div className="carousel-item">
+            <div className="carousel-item" data-bs-interval="2000">
               <img
                 src={projectthree}
                 className="d-block w-100"
