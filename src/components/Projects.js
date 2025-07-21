@@ -4,6 +4,8 @@ import "../App.css";
 import projectone from "../photos/projectone.png";
 import projecttwo from "../photos/projecttwo.png";
 import projectthree from "../photos/projectthree.jpg";
+import projectfour from "../photos/projectfour.png";
+import projectfive from "../photos/projectfive.png";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
@@ -37,6 +39,46 @@ const Projects = () => {
           <div className="carousel-inner">
             <div className="carousel-item active" data-bs-interval="10000">
               <img
+                src={projectfour}
+                className="d-block w-100"
+                alt="..."
+              />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>ZENTRA</h5>
+                <Link to="https://github.com/ekta183/Zentra" style={{color:"black"}}>
+                <p>
+                  Github Link
+                </p>
+                </Link>
+                <Link to="https://zentra-wb93.onrender.com" style={{color:"black"}}>
+                <p>
+                  Live Link
+                </p>
+                </Link>
+              </div>
+            </div>
+             <div className="carousel-item" data-bs-interval="10000">
+              <img
+                src={projectfive}
+                className="d-block w-100"
+                alt="..."
+              />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>TICKET AGENT</h5>
+                <Link to="https://github.com/ekta183/ai_agent_project" style={{color:"white"}}>
+                <p>
+                  Github Link
+                </p>
+                </Link>
+                <Link to="https://ai-agent-z7by.onrender.com/" style={{color:"white"}}>
+                <p>
+                  Live Link
+                </p>
+                </Link>
+              </div>
+            </div>
+            <div className="carousel-item " data-bs-interval="10000">
+              <img
                 src={projectone}
                 className="d-block w-100"
                 alt="..."
@@ -46,6 +88,11 @@ const Projects = () => {
                 <Link to="https://github.com/ekta183/Sri-Ram-Hospital" style={{color:"black"}}>
                 <p>
                   Github Link
+                </p>
+                </Link>
+                <Link to="https://sri-ram-hospital.onrender.com" style={{color:"black"}}>
+                <p>
+                  Live Link
                 </p>
                 </Link>
               </div>
@@ -58,6 +105,11 @@ const Projects = () => {
               />
               <div className="carousel-caption d-none d-md-block" style={{color:"white"}}>
                 <h5>FriendFlix:Social Media Website</h5>
+                <Link to="https://github.com/ekta183/mern-social-media-master" style={{color:"white"}}>
+                <p>
+                  Github Link
+                </p>
+                </Link>
                 <Link to="https://mern-social-media-frontend-f9et.onrender.com" style={{color:"white"}}>
                 <p>
                   Website Link
