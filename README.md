@@ -102,7 +102,6 @@ npm start
 - Built with Express and MongoDB
 - Contains messaging routes:
   - `POST /send` → Send message
-  - `GET /getall` → View all messages (admin only)
 
 ---
 
