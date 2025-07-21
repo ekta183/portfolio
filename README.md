@@ -1,70 +1,125 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 💼 Personal Portfolio Website
 
-## Available Scripts
+This is a full-stack portfolio project built using the **MERN** stack, showcasing my personal and professional work as a developer. It includes:
 
-In the project directory, you can run:
+- **Public Portfolio Frontend** – Showcases projects, skills, resume, and includes a contact form for messaging.
+- **Admin Dashboard** – A private interface to manage and view incoming messages.
+- **Backend API** – Powers message handling and supports both frontend and admin functionalities.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🌐 Live Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Portfolio (Public)**: [https://portfolio-ag1m.onrender.com/](https://portfolio-ag1m.onrender.com/)
+- **Backend**: [https://portfolio-backend-625e.onrender.com](https://portfolio-backend-625e.onrender.com)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 Project Structure
 
-### `npm run build`
+This repository is for the **frontend (public portfolio)**.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Folder Overview
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+portfolio/
+│
+├── public/               # Static assets
+├── src/
+│   ├── components/       # Reusable React components
+│   ├── photos/           # Portfolio images
+│   ├── App.js            # Main app component
+│   ├── index.js          # React entry point
+│   └── ...               # Styles and utilities
+├── package.json
+└── README.md
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## ⚙️ Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Responsive personal portfolio design built with **React**
+- Routing with **React Router v6**
+- Contact form to send messages (stored in backend)
+- Admin dashboard to view messages (separate private repo)
+- Deployed on **Render** (Frontend & Backend)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Technologies Used
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Frontend
 
-## Learn More
+- React.js
+- React Router DOM
+- React Icons
+- CSS
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Backend
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Node.js
+- Express.js
+- MongoDB (via Mongoose)
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Render (both frontend and backend)
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📬 Messaging Functionality
+
+### Public Contact Route
+
+Users can send you messages through the contact form:
+```
+POST /send
+```
+Handled via:
+```js
+router.post("/send", sendMessage);
+```
+
+
+## 📦 Installation
+
+Clone the frontend repo and install dependencies:
+
+```bash
+git clone https://github.com/ekta183/portfolio.git
+cd portfolio
+npm install
+npm start
+
+
+---
+
+## 📮 Backend API
+
+- **Repository**: `portfolio-backend`
+- Built with Express and MongoDB
+- Contains messaging routes:
+  - `POST /send` → Send message
+  - `GET /getall` → View all messages (admin only)
+
+---
+
+## 👩‍💻 Author
+
+**Ekta Jangir**  
+📧 ekta210183@gmail.com  
+🌐 [Portfolio Website](https://portfolio-ag1m.onrender.com/)
+
+---
+
+## 🤝 Contributing
+
+This is a personal project, but feel free to fork it for inspiration or learning purposes. For suggestions or ideas, feel free to contact me.
+
+---
+
+## 📃 License
+
+This project is under the **MIT License**. See the [LICENSE](./LICENSE) file for details (if added).
